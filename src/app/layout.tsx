@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import {Inter} from 'next/font/google'
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -30,7 +32,11 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
             <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png"/>
             <meta name="theme-color" content="#7f3a0b"/>
         </head>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+        {/*<Header/>*/}
+        {children}
+        <Footer/>
+        </body>
         </html>
     )
 }
