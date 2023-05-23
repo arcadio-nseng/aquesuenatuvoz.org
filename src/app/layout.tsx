@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import {Inter} from 'next/font/google'
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import NavBar from "@/components/layout/NavBar";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -33,7 +34,7 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
             <meta name="theme-color" content="#7f3a0b"/>
         </head>
         <body className={inter.className}>
-        {/*<Header/>*/}
+        <NavBar/>
         {children}
         <Footer/>
         </body>

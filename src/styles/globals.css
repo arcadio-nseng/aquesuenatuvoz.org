@@ -16,3 +16,11 @@
   }
 }
 
+@layer components {
+  .active {
+    @apply underline font-bold
+  }
+  .non-active {
+    @apply hover:text-gray-300 hover:font-bold hover:underline
+  }
+}

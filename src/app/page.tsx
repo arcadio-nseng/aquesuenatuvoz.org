@@ -10,7 +10,7 @@ export default function Home() {
             <Image src={Banner} className="absolute object-cover w-full h-full" alt={''}/>
             <div className="absolute inset-0 bg-black opacity-25">
             </div>
-            <NavBar/>
+            {/*<NavBar/>*/}
 
             <div className="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
                 <div className="relative z-10 flex flex-col items-start lg:w-3/5 xl:w-2/5">

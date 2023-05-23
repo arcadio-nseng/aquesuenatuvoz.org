@@ -3,8 +3,13 @@ import Image from "next/image";
 import Logo70 from "../../../public/assets/icons/ms-icon-70x70.png";
 import {Dropdown} from "flowbite-react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 export default function NavBar() {
+
+    const path = usePathname();
+
+    console.log(path);
 
     return (
         <header className="absolute top-0 left-0 right-0 z-20">
@@ -13,7 +18,7 @@ export default function NavBar() {
                 className="container px-6 py-4 mx-auto md:px-12 fixed w-full z-20 top-0 left-0 border-b bg-surface/70 backdrop-blur">
                 <div className="items-center justify-between md:flex">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="text-white flex items-center uppercase space-x-1">
+                        <a href="/" className="text-white flex items-center uppercase space-x-1">
                             <Image src={Logo70} width={50} height={50} alt={'A qué Suena tu Voz'}/>
                             <h1 className="leading-none">
                                 <span className="font-light text-xs">A Qué suena</span><br/>
@@ -46,22 +51,28 @@ export default function NavBar() {
                                     <Link href={'/proyectos'}>Proyectos</Link>
                                 </Dropdown.Item>
                                 <Dropdown.Item>
+                                    <Link href={'/proyectos'}>Merchandising</Link>
+                                </Dropdown.Item>
+                                <Dropdown.Item>
                                     <Link href={'/contacto'}>Contacto</Link>
                                 </Dropdown.Item>
                             </Dropdown>
                         </div>
                     </div>
                     <div className="items-center hidden md:flex">
-                        <Link href={'/'} className="mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer hover:text-gray-300 underline font-bold">
+                        <Link href={'/'} className={`mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer ${path === '/' ? 'active' : 'non-active'}`}>
                             Inicio
                         </Link>
-                        <Link href={'/quienes-somos'} className="mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer hover:text-gray-300 hover:font-bold hover:underline">
+                        <Link href={'/quienes-somos'} className={`mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer ${path === '/quienes-somos' ? 'active' : 'non-active'}`}>
                             Acerca de
                         </Link>
-                        <Link href={'/proyectos'} className="mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer hover:text-gray-300 hover:font-bold hover:underline">
+                        <Link href={'/proyectos'} className={`mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer ${path === '/proyectos' ? 'active' : 'non-active'}`}>
                             Proyectos
                         </Link>
-                        <Link href={'contacto'} className="mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer hover:text-gray-300 hover:font-bold hover:underline">
+                        <Link href={'/merchandising'} className={`mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer ${path === '/merchandising' ? 'active' : 'non-active'}`}>
+                            Merchandising
+                        </Link>
+                        <Link href={'contacto'} className={`mx-3 text-lg text-white transition-all ease-in duration-300  cursor-pointer ${path === '/contacto' ? 'active' : 'non-active'}`}>
                             Contacto
                         </Link>
 
