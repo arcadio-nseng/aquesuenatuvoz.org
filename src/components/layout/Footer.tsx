@@ -64,7 +64,7 @@ export default function Footer() {
                                     className="flex flex-col justify-center space-y-3 w-full md:flex-row md:space-x-3 md:space-y-0">
                                     <div className="relative w-full">
                                         <input type="email" id="&quot;form-subscribe-Subscribe"
-                                               className=" rounded-lg border-gray-100 flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                               className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                                placeholder="Email"/>
                                     </div>
                                     <button
