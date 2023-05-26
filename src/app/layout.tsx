@@ -12,6 +12,8 @@ export const metadata = {
 }
 
 export default function RootLayout({children,}: { children: React.ReactNode }) {
+
+
     return (
         <html lang="es">
         <head>
@@ -35,7 +37,7 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
         </head>
         <body className={inter.className}>
         <NavBar/>
-        {children}
+        <main>{children}</main>
         <Footer/>
         </body>
         </html>

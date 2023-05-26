@@ -15,8 +15,8 @@ export default function NavBar() {
         <header className="absolute top-0 left-0 right-0 z-20">
 
             <nav
-                className="container px-6 py-4 mx-auto md:px-12 fixed w-full z-20 top-0 left-0 border-b bg-surface/70 backdrop-blur">
-                <div className="items-center justify-between md:flex">
+                className={`px-6 py-4 md:px-12 fixed w-full z-20 top-0 left-0 border-b ${path === '/' ? 'bg-surface/70' : 'bg-surface'} backdrop-blur`}>
+                <div className="items-center justify-between md:flex container mx-auto">
                     <div className="flex items-center justify-between">
                         <a href="/" className="text-white flex items-center uppercase space-x-1">
                             <Image src={Logo70} width={50} height={50} alt={'A qué Suena tu Voz'}/>
@@ -31,9 +31,9 @@ export default function NavBar() {
                                     <button className="text-white focus:outline-none">
                                         <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2"
-                                                  stroke-linecap="round"
-                                                  stroke-linejoin="round">
+                                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2"
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round">
                                             </path>
                                         </svg>
                                     </button>

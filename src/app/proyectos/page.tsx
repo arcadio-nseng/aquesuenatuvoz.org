@@ -1,9 +1,9 @@
 import IconLarge from '../../../public/assets/images/logox2000.png';
 import Image from "next/image";
-import About from "@/components/sections/About";
+import Projects from "@/components/sections/Projects";
 
 export const metadata = {
-    title: 'Acerca de | A Qué Suena tu Voz',
+    title: 'Proyectos | A Qué Suena tu Voz',
     description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
 }
 
@@ -17,12 +17,12 @@ export default function AboutPage() {
                     <div className="relative flex flex-col sm:w-2/3 lg:w-2/5">
                         <span className="w-20 h-2 mb-12 bg-surface dark:bg-white"></span>
                         <h1 className="flex flex-col text-6xl font-black leading-none text-surface uppercase font-bebas-neue sm:text-8xl dark:text-white">
-                            ¿Quiénes
-                            <span className="text-5xl sm:text-7xl">Somos?</span>
+                            <span className="text-5xl sm:text-7xl">Proyectos</span>
                         </h1>
                         <p className="text-sm text-gray-700 sm:text-base dark:text-white m-4">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at delectus deserunt,
-                            dignissimos dolorem eius harum incidunt, minima nemo praesentium provident, sunt temporibus?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam,
+                            debitis dolorum ducimus, eius expedita facilis fugit maxime mollitia nesciunt
+                            optio quisquam, tempora.
                         </p>
 
                     </div>
@@ -32,7 +32,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <About/>
+            <Projects/>
 
         </>
     )

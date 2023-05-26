@@ -6,8 +6,8 @@ export default function Footer() {
 
     return (
 
-        <footer className="bg-white dark:bg-gray-800 pt-4 pb-8 xl:pt-8 dark:text-gray-300">
-            <div className="container px-6 mx-auto text-gray-400  sm:px-6 md:px-12">
+        <footer className="bg-white px-6 md:px-12 dark:bg-gray-800 pt-4 pb-8 xl:pt-8 dark:text-gray-300">
+            <div className="container mx-auto text-gray-400">
                 <ul className="flex flex-wrap justify-center pb-8 text-lg font-light">
                     <li className="w-1/2 md:w-1/3 lg:w-1/3">
                         <div>
@@ -51,7 +51,7 @@ export default function Footer() {
                             </ul>
                         </div>
                     </li>
-                    <li className="w-1/2 md:w-1/3 lg:w-1/3">
+                    <li className="w-full md:w-1/3 lg:w-1/3">
                         <div>
                             <h2 className="text-gray-500 dark:text-gray-200 text-md font-bold uppercase mb-4">
                                 Newsletter
@@ -61,10 +61,10 @@ export default function Footer() {
                             </p>
                             <div className="text-center pt-4 sm:pt-12 font-light flex items-center justify-center">
                                 <form
-                                    className="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0">
-                                    <div className=" relative ">
-                                        <input type="text" id="&quot;form-subscribe-Subscribe"
-                                               className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                    className="flex flex-col justify-center space-y-3 w-full md:flex-row md:space-x-3 md:space-y-0">
+                                    <div className="relative w-full">
+                                        <input type="email" id="&quot;form-subscribe-Subscribe"
+                                               className=" rounded-lg border-gray-100 flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                                placeholder="Email"/>
                                     </div>
                                     <button
