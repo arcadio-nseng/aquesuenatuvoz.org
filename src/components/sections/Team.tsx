@@ -1,3 +1,7 @@
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
+
 import TeamMember from "@/components/TeamMember";
 import TeamPhoto from '../../../public/assets/images/person-2.jpeg';
 import {INotionTeamMember, Notion} from "@/lib/notion";

@@ -36,6 +36,7 @@ export default function AboutPage() {
 
             <About/>
 
+            {/* @ts-expect-error Async Server Component */}
             <Team/>
 
         </>
