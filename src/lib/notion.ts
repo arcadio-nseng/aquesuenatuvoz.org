@@ -44,11 +44,11 @@ export interface INotionStatusField extends INotionField {
     type: 'status';
 }
 
-export interface INotionFile {
-    name: string;
-    type: 'file';
-    file: { url: string, expiry_time: string }[];
+export interface INotionSelectField extends INotionField {
+    select: { name: string};
+    type: 'select';
 }
+
 
 export interface INotionTeamMember {
     Estado: INotionStatusField;
@@ -62,6 +62,16 @@ export interface INotionTeamMember {
     Twitter: INotionUrlField;
     Instagram: INotionUrlField;
     Linkedin: INotionUrlField;
+}
+
+export interface INotionProject {
+    Email: INotionEmailField;
+    Estado: INotionStatusField;
+    Imagen: INotionFilesField;
+    Descripcion: INotionRichTextField;
+    Titulo: INotionTitleField;
+    Categoria: INotionSelectField;
+    URL: INotionUrlField;
 }
 
 

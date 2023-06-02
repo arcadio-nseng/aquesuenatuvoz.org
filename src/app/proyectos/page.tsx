@@ -32,6 +32,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
+            {/* @ts-expect-error Async Server Component */}
             <Projects/>
 
         </>

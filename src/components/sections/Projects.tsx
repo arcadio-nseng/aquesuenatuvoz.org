@@ -1,6 +1,21 @@
 import ProjectCard from "@/components/ProjectCard";
+import {INotionProject, INotionTeamMember, Notion} from "@/lib/notion";
 
-export default function Projects() {
+export default async function Projects() {
+
+    const databaseId = process.env.NOTION_PROJECTS_DATABASE_ID as string;
+
+    const query: any = await Notion.databases.query({
+        database_id: databaseId,
+        filter: {property: "Estado", status: {equals: 'Publicado'}},
+        sorts: [{property: 'Última edición', direction: 'descending'}]
+    }).catch(() => {});
+
+    if (!query) {
+        return <></>
+    }
+
+    const projects: INotionProject[] = query.results.map((q: any) => q.properties);
 
     return (
 
@@ -17,30 +32,21 @@ export default function Projects() {
                         </p>
                     </div>
                     <div className="text-end">
-                        {/*<form
-                            className="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0">
-                            <div className=" relative ">
-                                <input type="text" id="&quot;form-subscribe-Search"
-                                       className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                       placeholder="Enter a title"/>
-                            </div>
-                            <button
-                                className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-primary rounded-lg shadow-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
-                                type="submit">
-                                Search
-                            </button>
-                        </form>*/}
+
                     </div>
                 </div>
-                <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
+                <div className={`grid grid-cols-1 gap-12 sm:grid-cols-${projects.length > 2 ? 2 : projects.length} lg:grid-cols-${projects.length > 3 ? 3 : projects.length} xl:grid-cols-${projects.length > 4 ? 4 : projects.length}`}>
+                    {
+                        projects.map((project, index) => (
+                            <ProjectCard key={`project-${index}`}
+                                         title={project.Titulo.title[0].plain_text}
+                                         description={project.Descripcion.rich_text[0].plain_text}
+                                         category={project.Categoria.select.name}
+                                         image={project.Imagen.files[0].file.url}
+                                         email={project.Email.email}
+                                         url={project.URL.url}/>
+                        ))
+                    }
                 </div>
             </div>
 
