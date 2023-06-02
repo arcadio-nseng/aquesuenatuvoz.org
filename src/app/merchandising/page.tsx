@@ -5,6 +5,7 @@ import Merchant2 from '../../../public/assets/images/merchand-2.jpg';
 import Merchant3 from '../../../public/assets/images/merchand-3.jpg';
 import BannerImage from "../../../public/assets/images/merchandising.jpg";
 import ProductCard from "@/components/ProductCard";
+import Products from "@/components/sections/Products";
 
 export const metadata = {
     title: 'Merchandising | A Qué Suena tu Voz',
@@ -35,29 +36,8 @@ export default function AboutPage() {
                 </div>
             </div>
 
-
-            <section className="container mx-auto px-6 md:px-12 mb-24">
-                <div className="title mb-4">
-                    <p className="mb-4 text-4xl font-bold text-gray-800">
-                        Colabora comprando un artículo
-                    </p>
-                    <p className="text-2xl font-light text-gray-400">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, minus, vel. Aperiam quis repellendus velit.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-
-                </div>
-            </section>
+            {/* @ts-expect-error Async Server Component */}
+            <Products/>
 
         </>
     )

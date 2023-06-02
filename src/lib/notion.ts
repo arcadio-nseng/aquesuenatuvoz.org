@@ -15,7 +15,7 @@ export interface INotionEmailField extends INotionField {
 }
 
 export interface INotionNumberField extends INotionField {
-    number: string;
+    number: number;
     type: 'number';
 }
 
@@ -72,6 +72,15 @@ export interface INotionProject {
     Titulo: INotionTitleField;
     Categoria: INotionSelectField;
     URL: INotionUrlField;
+}
+
+export interface INotionProduct {
+    Estado: INotionStatusField;
+    Precio: INotionNumberField;
+    Image: INotionFilesField;
+    Etiqueta: INotionRichTextField;
+    Email?: INotionEmailField;
+    Nombre: INotionTitleField;
 }
 
 
