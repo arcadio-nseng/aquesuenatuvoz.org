@@ -1,8 +1,13 @@
-export default function Footer() {
+import SubscriptionForm from "@/components/SubscriptionForm";
+import {getApiCredentials} from "@/lib/sendPulse";
+
+export default async function Footer() {
 
     const startYear = 2023;
     const currentYear = new Date().getFullYear();
     const copyrightYear = startYear === currentYear ? startYear : `${startYear} - ${currentYear}`;
+
+    const apiCredentials = await getApiCredentials();
 
     return (
 
@@ -60,19 +65,7 @@ export default function Footer() {
                                 Suscríbete para recibir actualizaciones sobre nuestras publicaciones y proyectos
                             </p>
                             <div className="text-center pt-4 sm:pt-12 font-light flex items-center justify-center">
-                                <form
-                                    className="flex flex-col justify-center space-y-3 w-full md:flex-row md:space-x-3 md:space-y-0">
-                                    <div className="relative w-full">
-                                        <input type="email" id="&quot;form-subscribe-Subscribe"
-                                               className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                               placeholder="Email"/>
-                                    </div>
-                                    <button
-                                        className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-primary rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
-                                        type="submit">
-                                        Suscribirse
-                                    </button>
-                                </form>
+                                <SubscriptionForm apiCredentials={apiCredentials}/>
                             </div>
                         </div>
                     </li>

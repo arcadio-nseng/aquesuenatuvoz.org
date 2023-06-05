@@ -38,6 +38,7 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
         <body className={inter.className}>
         <NavBar/>
         <main>{children}</main>
+        {/* @ts-expect-error Async Server Component */}
         <Footer/>
         </body>
         </html>
