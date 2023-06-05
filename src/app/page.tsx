@@ -43,6 +43,7 @@ export default function Home() {
 
             <Introduction/>
 
+            {/* @ts-expect-error Async Server Component */}
             <Testimonials/>
         </>
 

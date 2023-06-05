@@ -83,5 +83,14 @@ export interface INotionProduct {
     Nombre: INotionTitleField;
 }
 
+export interface INotionTestimonial {
+    Foto: INotionFilesField;
+    Email: INotionEmailField;
+    Estado: INotionStatusField;
+    Ocupacion: INotionRichTextField;
+    Nombre: INotionTitleField;
+    Mensaje: INotionRichTextField;
+}
+
 
 
