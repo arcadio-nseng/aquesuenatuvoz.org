@@ -3,6 +3,7 @@ import Image from "next/image";
 import BannerImage from "../../../public/assets/images/contact.jpg";
 import ContactForm from "@/components/ContactForm";
 import AddressInfo from "@/components/AddressInfo";
+import Contact from "@/components/sections/Contact";
 
 export const metadata = {
     title: 'Contáctanos | A Qué Suena tu Voz',
@@ -37,7 +38,8 @@ export default function AboutPage() {
             <section className="container mx-auto mb-24 px-6 md:px-12">
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    <ContactForm/>
+                    {/* @ts-expect-error Async Server Component */}
+                    <Contact/>
                     <div className="shadow rounded-lg">
                         <AddressInfo/>
                     </div>
