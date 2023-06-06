@@ -34,6 +34,12 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
             <meta name="msapplication-TileColor" content="#7f3a0b"/>
             <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png"/>
             <meta name="theme-color" content="#7f3a0b"/>
+
+            <meta property="og:image" content={`${process.env.PUBLIC_URL || process.env.VERCEL_URL}/assets/images/main-3.png`}/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:siteName" content="A Qué Suena tu Voz"/>
+            <meta property="twitter:image" content={`${process.env.PUBLIC_URL || process.env.VERCEL_URL}/assets/images/main-3.png`}/>
+            <meta property="twitter:card" content="summary_large_image"/>
         </head>
         <body className={inter.className}>
         <NavBar/>

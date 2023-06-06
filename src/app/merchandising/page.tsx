@@ -1,18 +1,18 @@
 import Image from "next/image";
-import IconLarge from '../../../public/assets/images/logox2000.png';
-import Merchant1 from '../../../public/assets/images/merchand-1.jpg';
-import Merchant2 from '../../../public/assets/images/merchand-2.jpg';
-import Merchant3 from '../../../public/assets/images/merchand-3.jpg';
 import BannerImage from "../../../public/assets/images/merchandising.jpg";
-import ProductCard from "@/components/ProductCard";
 import Products from "@/components/sections/Products";
 
 export const metadata = {
     title: 'Merchandising | A Qué Suena tu Voz',
     description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
+    openGraph: {
+        title: 'Merchandising | A Qué Suena tu Voz',
+        description: 'Sitio web oficial de A Qué Suena tu Voz',
+        url: `${process.env.PUBLIC_URL || process.env.VERCEL_URL}/merchandising`,
+    }
 }
 
-export default function AboutPage() {
+export default function MerchandisingPage() {
 
     return (
         <>

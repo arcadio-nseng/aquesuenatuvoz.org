@@ -7,6 +7,11 @@ import Team from "@/components/sections/Team";
 export const metadata = {
     title: 'Acerca de | A Qué Suena tu Voz',
     description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
+    openGraph: {
+        title: 'Acerca de | A Qué Suena tu Voz',
+        description: 'Sitio web oficial de A Qué Suena tu Voz',
+        url: `${process.env.PUBLIC_URL || process.env.VERCEL_URL}/quienes-somos`,
+    }
 }
 
 export default function AboutPage() {

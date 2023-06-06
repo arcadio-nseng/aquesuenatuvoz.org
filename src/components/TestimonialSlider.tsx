@@ -4,6 +4,9 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Testimonial from "@/components/Testimonial";
 import 'swiper/swiper.min.css';
 import {INotionTestimonial} from "@/lib/notion";
+import SwiperCore, {Autoplay, Pagination} from "swiper";
+
+SwiperCore.use([Autoplay, Pagination]);
 
 type TestimonialSliderProps = {
     testimonials: INotionTestimonial[];
@@ -11,7 +14,7 @@ type TestimonialSliderProps = {
 export default async function TestimonialSlider({testimonials}: TestimonialSliderProps){
 
     return (
-        <Swiper slidesPerView={1}>
+        <Swiper modules={[Pagination, Autoplay]} slidesPerView="auto" autoplay={{delay: 5000}}>
             {
                 testimonials.map((testimonial, index) => (
                     <SwiperSlide key={`testimonial-${index}`}>

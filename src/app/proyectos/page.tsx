@@ -6,9 +6,14 @@ import ProjectsIllustration from "../../../public/assets/images/projects.svg";
 export const metadata = {
     title: 'Proyectos | A Qué Suena tu Voz',
     description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
+    openGraph: {
+        title: 'Proyectos | A Qué Suena tu Voz',
+        description: 'Sitio web oficial de A Qué Suena tu Voz',
+        url: `${process.env.PUBLIC_URL || process.env.VERCEL_URL}/proyectos`,
+    }
 }
 
-export default function AboutPage() {
+export default function ProjectsPage() {
 
     return (
         <>

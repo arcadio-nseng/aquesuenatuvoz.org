@@ -8,6 +8,11 @@ import Contact from "@/components/sections/Contact";
 export const metadata = {
     title: 'Contáctanos | A Qué Suena tu Voz',
     description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
+    openGraph: {
+        title: 'Contáctanos | A Qué Suena tu Voz',
+        description: 'C/ del triunfo, Malabo, Bioko Norte, Guinea Ecuatorial. Tel: +240', /* todo: add tell and email*/
+        url: `${process.env.PUBLIC_URL || process.env.VERCEL_URL}/contacto`,
+    }
 }
 
 export default function AboutPage() {

@@ -9,6 +9,16 @@ import Introduction from "@/components/sections/Introduction";
 import Info from "@/components/sections/Info";
 import FancyBackground from "@/components/FancyBackground";
 
+export const metadata = {
+    title: 'A Qué Suena tu Voz',
+    description: 'Sitio web oficial de A Qué Suena tu Voz', /*todo: set description*/
+    openGraph: {
+        title: 'A Qué Suena tu Voz',
+        description: 'Sitio web oficial de A Qué Suena tu Voz',
+        url: `${process.env.PUBLIC_URL || process.env.VERCEL_URL}/`,
+    }
+}
+
 export default function Home() {
     return (
 
