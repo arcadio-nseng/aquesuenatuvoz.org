@@ -21,8 +21,8 @@ export default function ContactForm({apiCredentials}: ContactFormProps) {
 
     if (!apiCredentials) {
         return (
-            <div className="w-full p-6 m-auto rounded-lg shadow dark:bg-gray-800">
-                <p className="mb-6 text-3xl font-light text-gray-800 dark:text-white">
+            <div className="w-full p-6 m-auto rounded-lg shadow">
+                <p className="mb-6 text-3xl font-light text-gray-800">
                     Déjanos un mensaje
                 </p>
                 <p className="mb-4">Formulario de contacto no disponible en este momento. Intente <Link href="/contacto"
@@ -75,8 +75,8 @@ export default function ContactForm({apiCredentials}: ContactFormProps) {
     return (
         <form className="flex w-full space-x-3" onSubmit={onSubmit}>
             <div
-                className="w-full p-6 m-auto rounded-lg shadow dark:bg-gray-800">
-                <div className="mb-6 text-3xl font-light text-gray-800 dark:text-white">
+                className="w-full p-6 m-auto rounded-lg shadow">
+                <div className="mb-6 text-3xl font-light text-gray-800">
                     Déjanos un mensaje
                 </div>
                 <div className="grid grid-cols-2 gap-4 m-auto">

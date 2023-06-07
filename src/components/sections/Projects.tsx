@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import {INotionProject, INotionTeamMember, Notion} from "@/lib/notion";
+import NoData from "@/components/NoData";
 
 export default async function Projects() {
 
@@ -12,7 +13,7 @@ export default async function Projects() {
     }).catch(() => {});
 
     if (!query) {
-        return <></>
+        return <NoData message="No hay proyectos en este momento"/>
     }
 
     const projects: INotionProject[] = query.results.map((q: any) => q.properties);

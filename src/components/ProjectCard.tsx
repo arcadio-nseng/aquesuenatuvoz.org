@@ -17,14 +17,14 @@ export default function ProjectCard({title, category, description, email, image,
                 <div className="h-40 relative">
                     <Image alt="blog photo" src={image} fill className="object-cover" />
                 </div>
-                <div className="w-full p-4 bg-white dark:bg-gray-800">
+                <div className="w-full p-4 bg-white">
                     <p className="font-medium text-surface text-md">
                         {category}
                     </p>
-                    <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                    <p className="mb-2 text-xl font-medium text-gray-800">
                         {title}
                     </p>
-                    <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                    <p className="font-light text-gray-400 text-md">
                         {description}
                     </p>
                     <div className="flex items-center mt-4">

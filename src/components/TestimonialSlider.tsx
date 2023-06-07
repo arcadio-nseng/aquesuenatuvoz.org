@@ -11,7 +11,7 @@ SwiperCore.use([Autoplay, Pagination]);
 type TestimonialSliderProps = {
     testimonials: INotionTestimonial[];
 }
-export default async function TestimonialSlider({testimonials}: TestimonialSliderProps){
+export default function TestimonialSlider({testimonials}: TestimonialSliderProps){
 
     return (
         <Swiper modules={[Pagination, Autoplay]} slidesPerView="auto" autoplay={{delay: 5000}}>

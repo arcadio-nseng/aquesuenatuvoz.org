@@ -1,9 +1,9 @@
 'use client';
 import Image from "next/image";
 import Logo70 from "../../../public/assets/icons/ms-icon-70x70.png";
-import {Dropdown} from "flowbite-react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import {FaBars} from "react-icons/fa";
 
 export default function NavBar() {
 
@@ -25,38 +25,10 @@ export default function NavBar() {
                                 <span className="font-black">tu voz🎤</span></h1>
                         </a>
                         <div className="md:hidden">
+                            <button className="text-white focus:outline-none text-4xl">
+                                <FaBars/>
+                            </button>
 
-                            <Dropdown
-                                label={
-                                    <button className="text-white focus:outline-none">
-                                        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2"
-                                                  strokeLinecap="round"
-                                                  strokeLinejoin="round">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                }
-                                inline={true}
-                                size={"sm"}
-                            >
-                                <Dropdown.Item>
-                                    <Link href={'/'}>Inicio</Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    <Link href={'/quienes-somos'}>Acerca de</Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    <Link href={'/proyectos'}>Proyectos</Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    <Link href={'/proyectos'}>Merchandising</Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    <Link href={'/contacto'}>Contacto</Link>
-                                </Dropdown.Item>
-                            </Dropdown>
                         </div>
                     </div>
                     <div className="items-center hidden md:flex">

@@ -2,16 +2,16 @@ export default function About() {
 
     return (
 
-        <div className="container p-6 px-6 mx-auto bg-white dark:bg-gray-800">
+        <div className="container p-6 px-6 mx-auto bg-white">
             <div className="mb-16 text-center">
                 <h2 className="text-base font-semibold tracking-wide text-surface uppercase">
                     A qué suena tu voz
                 </h2>
-                <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                     Una plataforma de
                 </p>
             </div>
-            <div className="flex flex-wrap my-12 dark:text-white">
+            <div className="flex flex-wrap my-12">
                 <div className="w-full p-8 border-b md:w-1/2 md:border-r lg:w-1/3">
                     <div className="flex items-center mb-6">
                         <svg width="20" height="20" fill="currentColor" className="w-6 h-6 text-indigo-500"
@@ -24,7 +24,7 @@ export default function About() {
                             Increase sales
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Receive more sales by selling across multple sales channels instead of just having a single
                         point of entry.
                     </p>
@@ -41,7 +41,7 @@ export default function About() {
                             Overlays
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Apply beautiful overlays to every product image distributed through our platform. A visual
                         touch.
                     </p>
@@ -58,7 +58,7 @@ export default function About() {
                             Control
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Apply filters and control which products to sell on each sales channel. E.g. exclude products
                         with low margins.
                     </p>
@@ -75,7 +75,7 @@ export default function About() {
                             Mapping
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Map product categories with each sales channels&#x27; own categories and achieve better results
                         and lower costs.
                     </p>
@@ -92,7 +92,7 @@ export default function About() {
                             Fill the missing
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Modify products with extra properties and achieve the maximum output for each installed sales
                         channel.
                     </p>
@@ -109,7 +109,7 @@ export default function About() {
                             Dynamic Texts
                         </div>
                     </div>
-                    <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
+                    <p className="leading-loose text-gray-500 text-md">
                         Build unique product titles and descriptions instead of spending days manually editing each
                         product.
                     </p>

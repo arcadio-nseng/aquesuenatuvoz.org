@@ -25,8 +25,7 @@ export default async function Testimonials() {
 
             <h2 className="text-4xl text-center text-white font-bold mb-12">Testimonios</h2>
 
-            {/* @ts-expect-error Async Server Component */}
-            <TestimonialSlider testimonials={testimonials}/>
+            {/*<TestimonialSlider testimonials={testimonials}/>*/}
 
 
         </FancyBackground>

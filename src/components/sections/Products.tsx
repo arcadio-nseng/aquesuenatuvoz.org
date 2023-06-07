@@ -1,5 +1,6 @@
 import {INotionProduct, INotionProject, Notion} from "@/lib/notion";
 import ProductCard from "@/components/ProductCard";
+import NoData from "@/components/NoData";
 
 export default async function Products() {
 
@@ -12,7 +13,7 @@ export default async function Products() {
     }).catch(() => {});
 
     if (!query || query.results.length === 0) {
-        return <></> /* TODO: create empty component for products */
+        return <NoData message="No hay artículos en este momento"/>
     }
 
     const products: INotionProduct[] = query.results.map((q: any) => q.properties);
