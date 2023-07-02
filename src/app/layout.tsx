@@ -41,10 +41,10 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
             <meta property="twitter:card" content="summary_large_image"/>
         </head>
         <body className={inter.className}>
-        <NavBar/>
+        {/*<NavBar/>*/}
         <main>{children}</main>
-        {/* @ts-expect-error Async Server Component */}
-        <Footer/>
+        {/*/!* @ts-expect-error Async Server Component *!/*/}
+        {/*<Footer/>*/}
         </body>
         </html>
     )
